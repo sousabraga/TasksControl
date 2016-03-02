@@ -1,0 +1,10 @@
+body {
+	background-image: url("background_logout.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+div.conteudo {
+	color: black;
+	margin: 30px;
+}

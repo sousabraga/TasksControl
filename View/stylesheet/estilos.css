@@ -1,0 +1,21 @@
+body {
+	background-image: url("background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+form legend {
+	color: black;
+}
+
+form#form { 
+	width: 400px;  
+	left: 50%; 
+	margin: -170px 0 0 -210px; 
+	padding:10px;
+	position: absolute; 
+	top: 50%; 
+}
+
+
+

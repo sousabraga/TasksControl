@@ -1,0 +1,14 @@
+body {
+	background-image: url("background_listar.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+div.conteudo {
+	margin: 20px;
+}
+
+legend, th {
+	color: white;
+}
+
