@@ -17,12 +17,8 @@
 			$pstm->bindParam(4, $tarefa->getLembrete());
 			$pstm->bindParam(5, $tarefa->getIdUsuario());
 			
-			if($pstm->execute()) {
-				return true;
-			} else {
-				return false;
-			}
-			
+			return $pstm->execute();
+							
 			$pstm->close();
 			$connection->close();
 		}
@@ -40,12 +36,8 @@
 			$pstm->bindParam(4, $tarefa->getLembrete());
 			$pstm->bindParam(5, $tarefa->getId());
 			
-			if($pstm->execute()) {
-				return true;
-			} else {
-				return false;
-			}
-			
+			return $pstm->execute();
+						
 			$pstm->close();
 			$connection->close();	
 		}
@@ -59,11 +51,7 @@
 			$pstm = $connection->prepare($sql);
 			$pstm->bindParam(1, $id);
 			
-			if($pstm->execute()) {
-				return true;
-			} else {
-				false;
-			}
+			return $pstm->execute(); 
 			
 			$pstm->close();
 			$connection->close();

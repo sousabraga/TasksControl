@@ -15,11 +15,7 @@
 			$pstm->bindParam(2, $usuario->getSenha());
 			$pstm->bindParam(3, $usuario->getEmail());
 			
-			if($pstm->execute()) {
-				return true;
-			} else {
-				return false;
-			}
+			return $pstm->execute();
 			
 			$pstm->close();
 			$connection->close();
@@ -37,12 +33,8 @@
 			$pstm->bindParam(3, $usuario->getEmail());
 			$pstm->bindParam(4, $usuario->getId());
 			
-			if($pstm->execute()) {
-				return true;
-			} else {
-				return false;
-			}
-			
+			return $pstm->execute();
+				
 			$pstm->close();
 			$connection->close();
 		}
@@ -56,11 +48,7 @@
 			$pstm = $connection->prepare($sql);
 			$pstm->bindParam(1, $id);
 			
-			if($pstm->execute()) {
-				return true;
-			} else {
-				return false;
-			}
+			return $pstm->execute();
 			
 			$pstm->close();
 			$connection->close();
